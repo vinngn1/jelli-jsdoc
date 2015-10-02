@@ -484,7 +484,7 @@ exports.publish = function(taffyData, opts, tutorials) {
     view.tutoriallink = tutoriallink;
     view.htmlsafe = htmlsafe;
     view.members = members; //@davidshimjs: To make navigation for customizing
-console.log(members);
+
     // once for all
     view.nav = buildNav(members);
     attachModuleSymbols( find({ kind: ['class', 'function'], longname: {left: 'module:'} }),
