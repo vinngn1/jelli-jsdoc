@@ -1,5 +1,5 @@
 {
-  "name": "jaguarjs-jsdoc",
+  "name": "jelli-jsdoc-theme",
   "version": "0.0.1",
   "description": "Jaguar.js template for JSDoc 3",
   "main": "Gruntfile.js",
