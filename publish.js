@@ -254,6 +254,60 @@ function buildNav(members) {
         });
     }
 
+    if (members.modules.length) {
+        _.each(members.modules, function (v) {
+            nav.push({
+                type: 'module',
+                longname: v.longname,
+                name: v.name,
+                members: find({
+                    kind: 'member',
+                    memberof: v.longname
+                }),
+                methods: find({
+                    kind: 'function',
+                    memberof: v.longname
+                }),
+                typedefs: find({
+                    kind: 'typedef',
+                    memberof: v.longname
+                }),
+                events: find({
+                    kind: 'event',
+                    memberof: v.longname
+                })
+            });
+        });
+    }
+
+    if (members.globals.length) {
+        _.each(members.globals, function (v) {
+            if (!/\*{2}\/$/.exec(v.comment)) {
+                nav.push({
+                    type: 'global',
+                    longname: v.longname,
+                    name: v.name,
+                    members: find({
+                        kind: 'member',
+                        memberof: v.longname
+                    }),
+                    methods: find({
+                        kind: 'function',
+                        memberof: v.longname
+                    }),
+                    typedefs: find({
+                        kind: 'typedef',
+                        memberof: v.longname
+                    }),
+                    events: find({
+                        kind: 'event',
+                        memberof: v.longname
+                    })
+                });
+            }
+        });
+    }
+
     return nav;
 }
 
@@ -430,7 +484,7 @@ exports.publish = function(taffyData, opts, tutorials) {
     view.tutoriallink = tutoriallink;
     view.htmlsafe = htmlsafe;
     view.members = members; //@davidshimjs: To make navigation for customizing
-
+console.log(members);
     // once for all
     view.nav = buildNav(members);
     attachModuleSymbols( find({ kind: ['class', 'function'], longname: {left: 'module:'} }),
