@@ -1,5 +1,5 @@
 
-# JSDoc Theme for Jelli Doccumentation
+# JSDoc Guide
 
 
 ## Introduction
@@ -46,7 +46,7 @@ In our code base we already used `/**` with `**/` as closing comment without pur
 
 4. Copy these two below lines to the dependencies section in `package.json` of your project
 
-        "jaguarjs-jsdoc": "git+https://github.com/vinngn1/jelli-jsdoc.git",
+        "jelli-jsdoc-theme": "^0.0.1",
         "jsdoc": "^3.3.3"
 
     Then run
