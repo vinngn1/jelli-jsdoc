@@ -1,7 +1,7 @@
 {
   "name": "jelli-jsdoc-theme",
   "version": "0.0.1",
-  "description": "Jaguar.js template for JSDoc 3",
+  "description": "Theme for Jelli Documentation",
   "main": "Gruntfile.js",
   "dependencies": {
   },
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/davidshimjs/jaguarjs-jsdoc.git"
+    "url": "git://github.com/vinngn1/jelli-jsdoc-theme.git"
   },
   "keywords": [
     "jsdoc",
@@ -33,6 +33,6 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/davidshimjs/jaguarjs-jsdoc/issues"
+    "url": "https://github.com/vinngn1/jelli-jsdoc-theme/issues"
   }
 }
